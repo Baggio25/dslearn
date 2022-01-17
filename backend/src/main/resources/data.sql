@@ -28,8 +28,12 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id)
 	   
 /*RESOURCE*/
 INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
-	   VALUES ( 'Trilha Spring React', 'Trilha principal do curso', 1, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 1, 1);
+	   VALUES ( 'Trilha Spring React', 'Trilha principal do curso', 1, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', null, 1, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
-	   VALUES ( 'Forum', 'Tire suas dúvidas', 2, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 2, 1);
+	   VALUES ( 'Forum', 'Tire suas dúvidas', 2, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', null, 2, 1);
 INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
-	   VALUES ( 'Lives bônus', 'Lives exclusivas', 3, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 0, 1);
+	   VALUES ( 'Lives bônus', 'Lives exclusivas', 3, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', null, 0, 1);
+	   
+/*RESOURCE*/
+INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id)
+	   VALUES ( 'Capítulo 1', 'Neste capítulo vamos começar', 1, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', 1, null);
