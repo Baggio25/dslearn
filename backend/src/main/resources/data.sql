@@ -25,3 +25,11 @@ INSERT INTO tb_offer (edition, start_moment, end_moment, course_id)
 	   VALUES ( '1.0', TIMESTAMP WITH TIME ZONE '2022-01-11T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-01-11T03:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) 
 	   VALUES ( '1.0', TIMESTAMP WITH TIME ZONE '2022-02-11T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-02-11T03:00:00Z', 1);
+	   
+/*RESOURCE*/
+INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
+	   VALUES ( 'Trilha Spring React', 'Trilha principal do curso', 1, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 1, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
+	   VALUES ( 'Forum', 'Tire suas dúvidas', 2, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 2, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, external_link, type, offer_id) 
+	   VALUES ( 'Lives bônus', 'Lives exclusivas', 3, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', '', 0, 1);
