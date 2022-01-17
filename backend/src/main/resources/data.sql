@@ -17,6 +17,11 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
 
 /*COURSE*/
-INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Bootcamp Spring React Fullstack', 
-															'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png',
-															'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/bonus.png');
+INSERT INTO tb_course (name, img_uri, img_gray_uri) 
+	   VALUES ('Bootcamp Spring React Fullstack', 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/bonus.png');
+
+/*OFFER*/
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) 
+	   VALUES ( '1.0', TIMESTAMP WITH TIME ZONE '2022-01-11T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-01-11T03:00:00Z', 1);
+INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) 
+	   VALUES ( '1.0', TIMESTAMP WITH TIME ZONE '2022-02-11T03:00:00Z', TIMESTAMP WITH TIME ZONE '2023-02-11T03:00:00Z', 1);
