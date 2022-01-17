@@ -41,3 +41,9 @@ INSERT INTO tb_section (title, description, position, img_uri, resource_id, prer
 	   VALUES ( 'Capítulo 2', 'Iniciando os cadastros', 2, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', 1, 1);
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id)
 	   VALUES ( 'Capítulo 3', 'Finalizando os cadastros', 3, 'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png', 1, 2);
+
+/*ENROLLMENT*/
+INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, user_id, offer_id) 
+	   VALUES (TIMESTAMP WITH TIME ZONE '2023-01-17T13:00:00Z', null, true, false, 1, 1);
+INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, user_id, offer_id) 
+	   VALUES (TIMESTAMP WITH TIME ZONE '2023-01-17T13:00:00Z', null, true, false, 2, 1);
