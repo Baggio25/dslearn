@@ -15,3 +15,8 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 2);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (3, 3);
+
+/*COURSE*/
+INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Bootcamp Spring React Fullstack', 
+															'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/student.png',
+															'https://raw.githubusercontent.com/devsuperior/bds-assets/main/img/bonus.png');
