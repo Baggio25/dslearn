@@ -28,10 +28,10 @@ public class Offer implements Serializable{
 	
 	private String edition;
 	
-	@Column(name = "start_moment")
+	@Column(name = "start_moment", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant startMoment;
 	
-	@Column(name = "end_moment")
+	@Column(name = "end_moment", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant endMoment;
 
 	@ManyToOne
