@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import com.devsuperior.dslearnbds.services.exceptions.DatabaseException;
+import com.devsuperior.dslearnbds.services.exceptions.ForbiddenException;
 import com.devsuperior.dslearnbds.services.exceptions.ResourceNotFoundException;
+import com.devsuperior.dslearnbds.services.exceptions.UnauthorizedException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
@@ -20,6 +22,8 @@ public class ResourceExceptionHandler {
 	private static Integer STATUS_NOT_FOUND = HttpStatus.NOT_FOUND.value(); // 404 not found
 	private static Integer STATUS_BAD_REQUEST = HttpStatus.BAD_REQUEST.value(); // 400 bad request
 	private static Integer STATUS_UNPROCESSABLE = HttpStatus.UNPROCESSABLE_ENTITY.value(); // 422 umprocessable entity
+	private static Integer STATUS_FORBIDDEN = HttpStatus.FORBIDDEN.value(); // 403 Forbidden exception
+	private static Integer STATUS_UNAUTHORIZED = HttpStatus.UNAUTHORIZED.value(); // 401 Unauthorized exception
 
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<StandardError> entityNotFound(ResourceNotFoundException e, HttpServletRequest request) {
@@ -59,5 +63,17 @@ public class ResourceExceptionHandler {
 		}
 		
 		return ResponseEntity.status(STATUS_UNPROCESSABLE).body(error);
+	}
+	
+	@ExceptionHandler(ForbiddenException.class)
+	public ResponseEntity<OAuthCustomError> forbidden(ForbiddenException e, HttpServletRequest request) {
+		OAuthCustomError error = new OAuthCustomError("Forbidden", e.getMessage());		
+		return ResponseEntity.status(STATUS_FORBIDDEN).body(error);
+	}
+	
+	@ExceptionHandler(UnauthorizedException.class)
+	public ResponseEntity<OAuthCustomError> unauthorized(UnauthorizedException e, HttpServletRequest request) {
+		OAuthCustomError error = new OAuthCustomError("Unauthorized", e.getMessage());		
+		return ResponseEntity.status(STATUS_UNAUTHORIZED).body(error);
 	}
 }
