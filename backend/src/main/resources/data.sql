@@ -47,3 +47,25 @@ INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update,
 	   VALUES (TIMESTAMP WITH TIME ZONE '2023-01-17T13:00:00Z', null, true, false, 1, 1);
 INSERT INTO tb_enrollment (enroll_moment, refund_moment, available, only_update, user_id, offer_id) 
 	   VALUES (TIMESTAMP WITH TIME ZONE '2023-01-17T13:00:00Z', null, true, false, 2, 1);
+	   
+/*LESSON, CONTENT E TASK -- HERANÇA*/
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 01 do Cap 1', 1, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (1, 'Material de Apoio', 'https://www.youtube.com/watch?v=IFI0h97gqzc');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 02 do Cap 1', 2, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (2, '', 'https://www.youtube.com/watch?v=IFI0h97gqzc');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Aula 03 do Cap 1', 3, 1);
+INSERT INTO tb_content (id, text_content, video_uri) VALUES (3, '', 'https://www.youtube.com/watch?v=IFI0h97gqzc');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefa do Cap 1', 4, 1);
+INSERT INTO tb_task (id, description, question_count, approval_count, weight, due_date) VALUES (4, 'Fazer um trabalho legal', 5, 4, 1.0, 
+		TIMESTAMP WITH TIME ZONE '2023-01-25T03:00:00Z');
+
+/*LESSONS DONE*/
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (2, 1, 1);
+INSERT INTO tb_lessons_done (lesson_id, user_id, offer_id) VALUES (3, 1, 1);
+
+
+
